@@ -1,2 +1,3 @@
-# leetcode
-LeetCode刷题记录
+* 《剑指Offer》
+* 《程序员代码面试指南》
+* LeetCode
