@@ -8,7 +8,7 @@ import java.util.*;
  * 最长时间未响应的用户替换出去，把1001用户放入
  * O(logN)
  */
-public class LRU {
+public class Q146 {
 
     private int maxUserSize=1000;
     private List<User> userList=new ArrayList<>();

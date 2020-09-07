@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 /**
  * 最小栈
- * https://leetcode-cn.com/problems/min-stack/
+ * https://www.nowcoder.com/practice/05e57ce2cd8e4a1eae8c3b0a7e9886be?tpId=101&&tqId=33073&rp=1&ru=/ta/programmer-code-interview-guide&qru=/ta/programmer-code-interview-guide/question-ranking
  */
 public class Q155 {
     public static void main(String[] args) {
