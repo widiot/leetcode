@@ -2,6 +2,7 @@
 
 ## 链表
 
+题目
 * 简单
     * [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
     * [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
@@ -13,6 +14,10 @@
     * [剑指 Offer 35. 复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
 * 困难
     * 
+
+总结
+* 多级双向链表
+    * 多级双向链表的节点有next、pre和child，结构上可以看作树，child为树节点的left，next为树节点的right，pre为指向父节点的指针。所以对多级双向链表的操作都可以类比为对树的操作
 
 ## 树
 
