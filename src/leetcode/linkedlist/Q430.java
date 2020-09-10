@@ -2,6 +2,10 @@ package leetcode.linkedlist;
 
 import common.Node;
 
+/**
+ * 430. 扁平化多级双向链表
+ * https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list/
+ */
 public class Q430 {
     public static void main(String[] args) {
         Node n1 = new Node(1);
