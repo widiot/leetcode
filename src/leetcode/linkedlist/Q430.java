@@ -26,15 +26,6 @@ public class Q430 {
         }
     }
 
-    /*
-    // Definition for a Node.
-    class Node {
-        public int val;
-        public Node prev;
-        public Node next;
-        public Node child;
-    };
-    */
     static class Solution {
         public Node flatten(Node head) {
             // 看起来像是把树转为双向链表，child为left，next为right
