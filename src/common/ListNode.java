@@ -88,4 +88,19 @@ public class ListNode {
         l1.next = l2;
         return l1;
     }
+
+    public static ListNode get7() {
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
+        ListNode l3 = new ListNode(3);
+        l1.next = l2;
+        l2.next = l3;
+        return l1;
+    }
+
+    public static ListNode get8() {
+        ListNode l1 = new ListNode(9);
+        return l1;
+    }
+
 }

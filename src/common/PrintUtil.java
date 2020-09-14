@@ -14,6 +14,13 @@ public class PrintUtil {
         }
     }
 
+    public static void printLinkedArray(ListNode[] arr) {
+        for (ListNode listNode : arr) {
+            printLinkedList(listNode);
+            System.out.println();
+        }
+    }
+
     public static void printBinaryTree(TreeNode r) {
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.offer(r);
