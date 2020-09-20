@@ -36,9 +36,78 @@
 * 二叉搜索树
 * 平衡二叉搜索树
 
-树的遍历方法，递归和迭代
-* 前序遍历、中序遍历、后序遍历
-* 广度优先遍历、广度优先遍历
+树的遍历方法
+* 深度优先遍历（迭代、递归）
+    * 前序遍历、中序遍历、后序遍历
+* 广度优先遍历（迭代）
+    * 层次遍历
+
+递归遍历模板
+```java
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        func(root, list);
+        return list;
+    }
+
+    public void func(TreeNode root, List<Integer> list) {
+        if (root == null) return;
+        // list.add(root.val); // 前序遍历
+        func(root.left, list);
+        // list.add(root.val); // 中序遍历
+        func(root.right, list);
+        // list.add(root.val); // 后序遍历
+    }
+}
+```
+
+迭代遍历模板
+```java
+class Solution1 {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        if (root == null) return new ArrayList<>();
+        LinkedList<TreeNode> stack = new LinkedList<>();
+        List<Integer> list = new ArrayList<>();
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                // list.add(0, root.val); // 前序遍历
+                root = root.right;
+            }
+            root = stack.pop();
+            // list.add(0, root.val); // 中序遍历
+            root = root.left;
+            // 中序遍历，实现略有不同
+        }
+        return list;
+    }
+}
+```
+
+层序遍历模板
+```java
+class Solution {
+    public List<Integer> rightSideView(TreeNode root) {
+        if(root==null) return new ArrayList<>();
+        LinkedList<TreeNode> queue=new LinkedList<>();
+        queue.offer(root);
+        List<List<Integer>> list=new ArrayList<>();
+        while(!queue.isEmpty()){
+            int size=queue.size();
+            List<Integer> tList=new ArrayList<>();
+            while(size-->0){
+                root=queue.poll();
+                if(root.left!=null) queue.offer(root.left);
+                if(root.right!=null) queue.offer(root.right);
+                tTist.add(root.val);
+            }
+            list.add(tList);
+        }
+        return list;
+    }
+}
+```
 
 解题方法
 * 递归：树的思路很容易从递归去思考，很多性质，对于树的左子树和右子树都是同样适用的
@@ -48,3 +117,4 @@
     * 二叉搜索树的中序遍历是有序数组
 * 思考树的递归时，从最简单的情况开始考虑，当树=null时、当树只有一个左孩子、当树有左孩子和孩子等等思考下去
 * 树的遍历中，存在root，则可以操作root层，和下一层
+* 计算树的复杂度时，考虑完全二叉树，和退化成链表，两种极端情况
