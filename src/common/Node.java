@@ -6,6 +6,8 @@ public class Node {
     public Node prev;
     public Node child;
     public Node random;
+    public Node left;
+    public Node right;
 
     public Node(int val) {
         this.val = val;
